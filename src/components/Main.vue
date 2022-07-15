@@ -2,38 +2,40 @@
     <main>
         <MainBannerShop />
         <div class="main-content">
-            <ul>
-                <h3>DC Comics</h3>
-                <li v-for="(comic, index) in comicsDc" :key="index">
-                    <a :href="comic.url">
-                        {{ comic.text }}
-                    </a>
-                </li>
-
-                <h3>Shop</h3>
-                <li v-for="(shop, index) in shopsDc" :key="index">
-                    <a :href="shop.url">
-                        {{ shop.text }}
-                    </a>
-                </li>
-            </ul>
-            <ul>
-                <h3>DC</h3>
-                <li v-for="(policy, index) in DcPolicyStuff" :key="index">
-                    <a :href="policy.url">
-                        {{ policy.text }}
-                    </a>
-                </li>
-            </ul>
-            <ul>
-                <h3>Sites</h3>
-                <li v-for="(site, index) in sitesDc" :key="index">
-                    <a :href="site.url">
-                        {{ site.text }}
-                    </a>
-                </li>
-            </ul>
-            <img src="../assets/img/dc-logo-bg.png" alt="">
+            <div class="container">
+                <ul>
+                    <h2>DC Comics</h2>
+                    <li v-for="(comic, index) in comicsDc" :key="index">
+                        <a :href="comic.url">
+                            {{ comic.text }}
+                        </a>
+                    </li>
+    
+                    <h2>Shop</h2>
+                    <li v-for="(shop, index) in shopsDc" :key="index">
+                        <a :href="shop.url">
+                            {{ shop.text }}
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <h2>DC</h2>
+                    <li v-for="(policy, index) in DcPolicyStuff" :key="index">
+                        <a :href="policy.url">
+                            {{ policy.text }}
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <h2>Sites</h2>
+                    <li v-for="(site, index) in sitesDc" :key="index">
+                        <a :href="site.url">
+                            {{ site.text }}
+                        </a>
+                    </li>
+                </ul>
+                <img src="../assets/img/dc-logo-bg.png" alt="">
+            </div>
         </div>
     </main>
 </template>
@@ -165,7 +167,33 @@ export default {
 @import'../styles/variables.scss';
 @import'../styles/general.scss';
 .main-content {
-    display: flex;
     background-image: url('../assets/img/footer-bg.jpg');
+
+    .container{
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        ul{
+            margin-top: 30px;
+            
+            h2{
+                color: white;
+                margin: 10px 0px;
+            }
+
+            li{
+                list-style: none;
+                line-height: 25px;
+                font-size: 13px;
+
+                a{
+                    color: $iconFooterColor;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 }
 </style>
