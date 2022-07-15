@@ -34,7 +34,7 @@
                         </a>
                     </li>
                 </ul>
-                <img src="../assets/img/dc-logo-bg.png" alt="">
+                <img class="pos" src="../assets/img/dc-logo-bg.png" alt="">
             </div>
         </div>
     </main>
@@ -170,10 +170,16 @@ export default {
     background-image: url('../assets/img/footer-bg.jpg');
 
     .container{
+        position: relative;
         width: 1200px;
         margin: 0 auto;
         display: flex;
-        justify-content: space-between;
+
+        .pos{
+            position: absolute;
+            top: -65;
+            right: 0;
+        }
 
         ul{
             margin-top: 30px;

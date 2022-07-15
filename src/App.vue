@@ -2,7 +2,7 @@
   <section id="app">
     <Header/>
     <Main/>
-    <!--<Footer/> -->
+    <Footer/>
   </section>
 </template>
 
