@@ -4,38 +4,26 @@
         <div>
             <ul>
                 <h3>DC Comics</h3>
-                    <li>Characters</li>
-                    <li>Comics</li>
-                    <li>Movies</li>
-                    <li>Tv</li>
-                    <li>Games</li>
-                    <li>Videos</li>
-                    <li>News</li>
+                <li v-for="(comic, index) in comicsDc" :key="index">
+                    {{ comic.text }}
+                </li>
+
                 <h3>Shop</h3>
-                <li>Shop DC</li>
-                <li>Shop DC Collectibles</li>
+                <li v-for="(shop, index) in shopsDc" :key="index">
+                    {{ shop.text }}
+                </li>
             </ul>
             <ul>
                 <h3>DC</h3>
-                <li>Terms of Use</li>
-                <li>Privacy Policy (New)</li>
-                <li>Ad Choices</li>
-                <li>Advertising</li>
-                <li>Jobs</li>
-                <li>Subscriptions</li>
-                <li>Talent Workshops</li>
-                <li>CPSC Certificates</li>
-                <li>Ratings</li>
-                <li>Shop Help</li>
-                <li>Contact Us</li>
+                <li v-for="(policy, index) in DcPolicyStuff" :key="index">
+                    {{ policy.text }}
+                </li>
             </ul>
             <ul>
                 <h3>Sites</h3>
-                <li>DC</li>
-                <li>Mad Magazine</li>
-                <li>DC Kids</li>
-                <li>DC Universe</li>
-                <li>DC Power Visa</li>
+                <li v-for="(site, index) in sitesDc" :key="index">
+                    {{ site.text }}
+                </li>
             </ul>
             <img src="../assets/img/dc-logo-bg.png" alt="">
         </div>
@@ -45,12 +33,103 @@
 <script>
 import MainBannerShop from './MainBannerShop.vue';
 export default {
-    components: { MainBannerShop }
+    components: { MainBannerShop },
+
+    data: function () {
+        return {
+            comicsDc: [
+                {
+                    text: 'Characters',
+                },
+                {
+                    text: 'Comics',
+                },
+                {
+                    text: 'Movies',
+                },
+                {
+                    text: 'Tv',
+                },
+                {
+                    text: 'Games',
+                },
+                {
+                    text: 'Videos',
+                },
+                {
+                    text: 'News',
+                },
+            ],
+
+            shopsDc: [
+                {
+                    text: 'Shop DC',
+                },
+                {
+                    text: 'Shop DC Collectibles',
+                },
+            ],
+
+            DcPolicyStuff: [
+                {
+                    text: 'Terms of Use',
+                },
+                {
+                    text: 'Privacy Policy (New)',
+                },
+                {
+                    text: 'Ad Choices',
+                },
+                {
+                    text: 'Advertising',
+                },
+                {
+                    text: 'Jobs',
+                },
+                {
+                    text: 'Subscriptions',
+                },
+                {
+                    text: 'Talent Workshops',
+                },
+                {
+                    text: 'CPSC Certificates',
+                },
+                {
+                    text: 'Ratings',
+                },
+                {
+                    text: 'Shop Help',
+                },
+                {
+                    text: 'Contact Us',
+                },
+            ],
+
+            sitesDc: [
+                {
+                    text: 'DC',
+                },
+                {
+                    text: 'Mad Magazine',
+                },
+                {
+                    text: 'DC Kids',
+                },
+                {
+                    text: 'DC Universe',
+                },
+                {
+                    text: 'DC Power Visa',
+                },
+            ],
+        }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-div{
+div {
     display: flex;
     background-image: url('../assets/img/footer-bg.jpg');
 }
