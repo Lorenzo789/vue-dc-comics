@@ -3,23 +3,33 @@
         <ul>
             <li>
                 <img src="../assets/img/buy-comics-digital-comics.png" alt="digital-comics">
-                {{ linkDigitalComics }}
+                <a :href="urlLink">
+                    {{ linkDigitalComics }}
+                </a>
             </li>
             <li>
                 <img src="../assets/img/buy-comics-merchandise.png" alt="comics-merchandise">
-                {{ linkMerchandise }}
+                <a :href="urlLink">
+                    {{ linkMerchandise }}
+                </a>
             </li>
             <li>
                 <img src="../assets/img/buy-comics-subscriptions.png" alt="subscriptions">
-                {{ linkSubscription }}
+                <a :href="urlLink">
+                    {{ linkSubscription }}
+                </a>
             </li>
             <li>
                 <img src="../assets/img/buy-comics-shop-locator.png" alt="shop-locator">
-                {{ linkShopLocator }}
+                <a :href="urlLink">
+                    {{ linkShopLocator }}
+                </a>
             </li>
             <li>
                 <img src="../assets/img/buy-dc-power-visa.svg" alt="dc-power-visa">
-                {{ linkDcPowerVisa }}
+                <a :href="urlLink">
+                    {{ linkDcPowerVisa }}
+                </a>
             </li>
         </ul>
     </div>
@@ -34,6 +44,7 @@ export default {
             linkSubscription: 'Subscription',
             linkShopLocator: 'Comic shop locator',
             linkDcPowerVisa: 'DC Power Visa',
+            urlLink: '#',
         }
     }
 }
