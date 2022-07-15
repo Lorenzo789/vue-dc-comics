@@ -1,7 +1,7 @@
 <template>
     <main>
         <MainBannerShop />
-        <div>
+        <div class="main-content">
             <ul>
                 <h3>DC Comics</h3>
                 <li v-for="(comic, index) in comicsDc" :key="index">
@@ -162,7 +162,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-div {
+@import'../styles/variables.scss';
+@import'../styles/general.scss';
+.main-content {
     display: flex;
     background-image: url('../assets/img/footer-bg.jpg');
 }

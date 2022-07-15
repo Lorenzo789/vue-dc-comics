@@ -2,7 +2,7 @@
   <section id="app">
     <Header/>
     <Main/>
-    <Footer/>
+    <!--<Footer/> -->
   </section>
 </template>
 
@@ -22,5 +22,10 @@ export default {
 </script>
 
 <style lang="scss">
+  @import'./styles/variables.scss';
+  @import'./styles/general.scss';
 
+  #app{
+    font-family: 'Roboto', sans-serif;
+  };
 </style>

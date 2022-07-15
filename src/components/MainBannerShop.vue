@@ -1,37 +1,37 @@
 <template>
-    <div>
-        <ul>
-            <li>
+    <div class="banner-shop">
+        <div class="container">
+            <div>
                 <img src="../assets/img/buy-comics-digital-comics.png" alt="digital-comics">
                 <a :href="urlLink">
                     {{ linkDigitalComics }}
                 </a>
-            </li>
-            <li>
+            </div>
+            <div>
                 <img src="../assets/img/buy-comics-merchandise.png" alt="comics-merchandise">
                 <a :href="urlLink">
                     {{ linkMerchandise }}
                 </a>
-            </li>
-            <li>
+            </div>
+            <div>
                 <img src="../assets/img/buy-comics-subscriptions.png" alt="subscriptions">
                 <a :href="urlLink">
                     {{ linkSubscription }}
                 </a>
-            </li>
-            <li>
+            </div>
+            <div>
                 <img src="../assets/img/buy-comics-shop-locator.png" alt="shop-locator">
                 <a :href="urlLink">
                     {{ linkShopLocator }}
                 </a>
-            </li>
-            <li>
+            </div>
+            <div>
                 <img src="../assets/img/buy-dc-power-visa.svg" alt="dc-power-visa">
                 <a :href="urlLink">
                     {{ linkDcPowerVisa }}
                 </a>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -51,5 +51,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
+
+
+@import'../styles/variables.scss';
+@import'../styles/general.scss';
+
+.banner-shop {
+    padding: 50px;
+    background-color: $mainShopBg;
+
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    
+        div {
+            display: flex;
+            align-items: center;
+    
+            img {
+                height: 50px;
+            }
+        }
+    }
+
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
 
 </style>
