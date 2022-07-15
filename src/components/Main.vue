@@ -168,6 +168,7 @@ export default {
 @import'../styles/general.scss';
 .main-content {
     background-image: url('../assets/img/footer-bg.jpg');
+    padding: 30px;
 
     .container{
         position: relative;
@@ -177,13 +178,13 @@ export default {
 
         .pos{
             position: absolute;
-            top: -65;
+            top: -90px;
             right: 0;
         }
 
         ul{
             margin-top: 30px;
-            
+            margin-right: 30px;
             h2{
                 color: white;
                 margin: 10px 0px;

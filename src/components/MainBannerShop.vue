@@ -61,6 +61,7 @@ export default {
 .banner-shop {
     padding: 50px;
     background-color: $mainShopBg;
+    position: relative;
 
     .container {
         width: 1200px;
