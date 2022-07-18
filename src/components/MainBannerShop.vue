@@ -1,34 +1,10 @@
 <template>
     <div class="banner-shop">
         <div class="container">
-            <div>
-                <img src="../assets/img/buy-comics-digital-comics.png" alt="digital-comics">
-                <a :href="urlLink">
-                    {{ linkDigitalComics }}
-                </a>
-            </div>
-            <div>
-                <img src="../assets/img/buy-comics-merchandise.png" alt="comics-merchandise">
-                <a :href="urlLink">
-                    {{ linkMerchandise }}
-                </a>
-            </div>
-            <div>
-                <img src="../assets/img/buy-comics-subscriptions.png" alt="subscriptions">
-                <a :href="urlLink">
-                    {{ linkSubscription }}
-                </a>
-            </div>
-            <div>
-                <img src="../assets/img/buy-comics-shop-locator.png" alt="shop-locator">
-                <a :href="urlLink">
-                    {{ linkShopLocator }}
-                </a>
-            </div>
-            <div>
-                <img src="../assets/img/buy-dc-power-visa.svg" alt="dc-power-visa">
-                <a :href="urlLink">
-                    {{ linkDcPowerVisa }}
+            <div v-for="(link, index) in shopLinks" :key="index">
+                <img :src="require(`../assets/img/buy-${link.url}`)" :alt="link.text">
+                <a href="#">
+                    {{ link.text }}
                 </a>
             </div>
         </div>
@@ -39,21 +15,34 @@
 export default {
     data: function(){
         return{
-            linkDigitalComics: 'Digital Comics',
-            linkMerchandise: 'DC Merchandise',
-            linkSubscription: 'Subscription',
-            linkShopLocator: 'Comic shop locator',
-            linkDcPowerVisa: 'DC Power Visa',
-            urlLink: '#',
+            shopLinks: [
+                {
+                    text: 'Digital Comics',
+                    url: 'comics-digital-comics.png'
+                },
+                {
+                    text: 'DC Merchandise',
+                    url: 'comics-merchandise.png',
+                },
+                {
+                    text: 'Subscription',
+                    url: 'comics-subscriptions.png',
+                },
+                {
+                    text: 'Comic shop locator',
+                    url: 'comics-shop-locator.png',
+                },
+                {
+                    text: 'DC Power Visa',
+                    url: 'dc-power-visa.svg',
+                },
+            ]
         }
     }
 }
 </script>
 
 <style lang="scss" scoped>
-
-
-
 
 @import'../styles/variables.scss';
 @import'../styles/general.scss';
