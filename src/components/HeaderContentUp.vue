@@ -17,7 +17,6 @@ export default {
 <style lang="scss" scoped>
 
   @import'../styles/variables.scss';
-  @import'../styles/general.scss';
 
     .jumbotron{
     background-image: url('../assets/img/jumbotron.jpg');
