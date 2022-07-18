@@ -11,6 +11,8 @@
           :imageUrl="book.thumb"
           :titleBook="book.series"/>
 
+        <button class="btn-header">Load More</button>
+
       </div>
 
     </div>
@@ -113,12 +115,22 @@ export default {
     .header-content {
       background-color: $headerBannerBg;
       padding: 50px;
-
       .header-container {
         width: 1200px;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
+        .btn-header{
+          margin: 0 auto;
+          color: white;
+          font-weight: bold;
+          font-size: 16px;
+          text-transform: uppercase;
+          background-color: $mainShopBg;
+          border-color: $mainShopBg;
+          padding: 10px 40px;
+          
+        }
       }
     }
 </style>
