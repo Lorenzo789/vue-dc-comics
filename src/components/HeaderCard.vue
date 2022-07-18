@@ -3,12 +3,11 @@
 
         <div class="header-container">
 
-            <div class="card">
+            <div class="card" v-for="(book, index) in infoBooks" :key="index">
                 <div class="card-image">
-                    <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX"
-                        alt="">
+                    <img :src="book.thumb" :alt="book.series">
                 </div>
-                <h5>Action Comics</h5>
+                <h5>{{ book.series }}</h5>
             </div>
 
         </div>
@@ -18,6 +17,10 @@
 
 <script>
 export default {
+    props: {
+        imageUrl: 'string',
+        titleBook: 'string'
+    },
     data: function () {
         return {
             infoBooks: [
@@ -115,7 +118,7 @@ export default {
         display: flex;
         flex-wrap: wrap;
         .card{
-            
+
             width: calc(100% / 6);
                     
             h5{
@@ -139,7 +142,5 @@ export default {
             }
         }
     }
-
-
 
 </style>
