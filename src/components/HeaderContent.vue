@@ -1,14 +1,21 @@
 <template>
-  <div class="header-content">
-    <div>
-      <p>Content goes here</p>
+  <div>
+    <HeaderContentUp/>
+
+    <div class="header-content">
+
+      <div class="header-container">
+        <p>Content goes here</p>
+      </div>
+
     </div>
   </div>
 </template>
 
 <script>
+import HeaderContentUp from './HeaderContentUp.vue';
 export default {
-
+    components: { HeaderContentUp },
 }
 </script>
 
@@ -21,10 +28,10 @@ export default {
     padding: 50px;
   }
 
-.header-content>div{
-  width: 1200px;
-  margin: 0 auto;
-}
+  .header-container{
+    width: 1200px;
+    margin: 0 auto;
+  }
 
   p{
     font-size: 30px;
