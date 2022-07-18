@@ -1,7 +1,7 @@
 <template>
   <div class="header-content">
     <div>
-      <p>--> Content goes here <--</p>
+      <p>Content goes here</p>
     </div>
   </div>
 </template>
